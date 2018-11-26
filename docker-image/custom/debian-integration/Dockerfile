@@ -38,7 +38,7 @@ COPY ./conf/kubernetes.conf /fluentd/etc/
 # Copy plugins
 COPY plugins /fluentd/plugins/
 COPY entrypoint.sh /fluentd/entrypoint.sh
-
+RUN chmod +x /fluentd/entrypoint.sh
 # Environment variables
 ENV FLUENTD_OPT=""
 ENV FLUENTD_CONF="fluent.conf"
